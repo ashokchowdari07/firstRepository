@@ -1,3 +1,8 @@
-const os = require('node:os');
-console.log(os.availableParallelism());
-console.log(os.arch());
+const http = require("http");
+
+let server = http.createServer((req, res) => {
+    if(req.method == "GET") {
+        res.end("Server responding on port 3000");
+        
+    }
+})
